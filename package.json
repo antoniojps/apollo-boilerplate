@@ -1,0 +1,43 @@
+{
+  "name": "ytrank",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "clean": "rm -rf build && mkdir build",
+    "build": "cross-env NODE_ENV=production npm run clean && babel -d ./build ./src -s --copy-files",
+    "start": "node server.js",
+    "eslint": "eslint src",
+    "test": "cross-env NODE_ENV=test mocha --require babel-core/register src/tests/index.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
+  },
+  "dependencies": {
+    "@okgrow/graphql-scalars": "^0.4.1",
+    "apollo-server-express": "^2.0.0",
+    "cors": "2.8.4",
+    "express": "4.16.3",
+    "express-jwt": "5.3.1",
+    "graphql": "^0.13.2",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^8.2.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^4.2.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.11.0"
+  }
+}
