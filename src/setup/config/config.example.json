@@ -1,0 +1,18 @@
+{
+  "test": {
+    "PORT": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/YtRankTest",
+    "CLIENT_ORIGIN": "http://localhost:8080",
+    "PUBLIC_URL": "http://localhost:3000",
+    "GRAPHQL_ENDPOINT": "/graphql",
+    "YOUTUBE_APIKEY": ""
+  },
+  "development": {
+    "PORT": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/YtRank",
+    "CLIENT_ORIGIN": "http://localhost:8080",
+    "PUBLIC_URL": "http://localhost:3000",
+    "GRAPHQL_ENDPOINT": "/graphql",
+    "YOUTUBE_APIKEY": ""
+  }
+}
